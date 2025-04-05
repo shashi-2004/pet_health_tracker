@@ -16,8 +16,7 @@ bcrypt = Bcrypt(app)
 
 # Database setup function
 def init_db():
-    # Render lo persistent storage kosam absolute path or temp memory DB
-    db_path = os.path.join(os.getcwd(), 'database.db')  # Dynamic path
+    db_path = os.path.join(os.getcwd(), 'database.db')
     conn = sqlite3.connect(db_path)
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT UNIQUE, password TEXT)''')
