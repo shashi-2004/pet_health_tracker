@@ -22,7 +22,7 @@ async function saveSteps() {
     const formData = new FormData();
     formData.append('pet_id', petId);
     formData.append('steps', steps);
-    const response = await fetch('http://127.0.0.1:5000/save_steps', { method: 'POST', body: formData });
+    const response = await fetch('/save_steps', { method: 'POST', body: formData });
     const result = await response.json();
     alert(result.message);
 }
@@ -45,7 +45,7 @@ async function saveFood() {
     formData.append('pet_id', petId);
     formData.append('food', food);
     formData.append('calories', calories);
-    const response = await fetch('http://127.0.0.1:5000/save_food', { method: 'POST', body: formData });
+    const response = await fetch('/save_food', { method: 'POST', body: formData });
     const result = await response.json();
     alert(result.message);
 }
@@ -68,7 +68,7 @@ async function saveMedical() {
     formData.append('pet_id', petId);
     formData.append('problem', problem);
     formData.append('suggestion', suggestion);
-    const response = await fetch('http://127.0.0.1:5000/save_medical', { method: 'POST', body: formData });
+    const response = await fetch('/save_medical', { method: 'POST', body: formData });
     const result = await response.json();
     alert(result.message);
 }
@@ -83,7 +83,7 @@ async function saveVaccination() {
     formData.append('pet_id', petId);
     formData.append('vaccination_type', vaccinationType);
     formData.append('vaccination_date', vaccinationDate);
-    const response = await fetch('http://127.0.0.1:5000/save_vaccination', { method: 'POST', body: formData });
+    const response = await fetch('/save_vaccination', { method: 'POST', body: formData });
     const result = await response.json();
     alert(result.message);
 }
