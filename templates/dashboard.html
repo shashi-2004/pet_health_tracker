@@ -18,16 +18,11 @@
 </head>
 <body>
     <div class="container">
-        <!-- Updated Logo Description Here -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
                 <img src="{{ url_for('static', filename='logo.png') }}" alt="Pet Health Tracker Logo" style="width: 80px; height: auto;">
                 <h1 class="d-inline-block ms-3"><i class="fas fa-paw"></i> Pet Health Tracker</h1>
-                <p style="font-size: 0.9em; color: #007bff;">
-                    SHASHI VARMA 12313678<br>
-                    LAKSHMI THRINAYANI 12305852<br>
-                    TAGORE 12317035
-                </p>
+                <p style="font-size: 0.9em; color: #007bff;">SHASHI VARMA 12313678<br>LAKSHMI THRINAYANI 12305852<br>TAGORE 12317035</p>
             </div>
             <div>
                 <span class="me-3">Welcome, {{ username }}!</span>
@@ -63,7 +58,7 @@
         </div>
     </div>
 
-    <!-- Walking Modal (Already Working) -->
+    <!-- Walking Modal -->
     <div class="modal fade" id="walkingModal" tabindex="-1" aria-labelledby="walkingModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -90,7 +85,7 @@
         </div>
     </div>
 
-    <!-- Food Modal (Added Full Code) -->
+    <!-- Food Modal -->
     <div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -105,7 +100,7 @@
                     </div>
                     <div class="form-group">
                         <label for="foodType">Food Type:</label>
-                        <input type="text" class="form-control" id="foodType" placeholder="Enter Food Type (e.g., Chicken)">
+                        <input type="text" class="form-control" id="foodType" placeholder="Enter Food Type">
                     </div>
                     <div class="form-group">
                         <label for="foodQuantity">Quantity (grams):</label>
@@ -124,7 +119,7 @@
         </div>
     </div>
 
-    <!-- Medical Modal (Added Full Code) -->
+    <!-- Medical Modal -->
     <div class="modal fade" id="medicalModal" tabindex="-1" aria-labelledby="medicalModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -139,7 +134,7 @@
                     </div>
                     <div class="form-group">
                         <label for="problem">Problem:</label>
-                        <input type="text" class="form-control" id="problem" placeholder="Enter Problem (e.g., Vomiting)">
+                        <input type="text" class="form-control" id="problem" placeholder="Enter Problem">
                     </div>
                     <div class="text-center mt-3">
                         <button class="btn btn-primary" onclick="getSuggestion()">Get Suggestion</button>
@@ -154,7 +149,7 @@
         </div>
     </div>
 
-    <!-- Vaccination Modal (Added Full Code) -->
+    <!-- Vaccination Modal -->
     <div class="modal fade" id="vaccinationModal" tabindex="-1" aria-labelledby="vaccinationModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -169,7 +164,7 @@
                     </div>
                     <div class="form-group">
                         <label for="vaccinationType">Vaccination Type:</label>
-                        <input type="text" class="form-control" id="vaccinationType" placeholder="Enter Vaccination Type (e.g., Rabies)">
+                        <input type="text" class="form-control" id="vaccinationType" placeholder="Enter Vaccination Type">
                     </div>
                     <div class="form-group">
                         <label for="vaccinationDate">Vaccination Date:</label>
@@ -185,6 +180,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script> <!-- Fixed script path -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
